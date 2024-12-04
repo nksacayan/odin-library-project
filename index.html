@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Nick's Library</h1>
@@ -15,19 +16,19 @@
           <th>Number Pages</th>
           <th>Have Read</th>
         </tr>
-        <tr>
+        <tr class="library-content-row">
           <td>Test Title</td>
           <td>Jack Russell</td>
           <td>Poodle</td>
           <td>Streetdog</td>
         </tr>
-        <tr>
+        <tr class="library-content-row">
           <td>Age</td>
           <td>16</td>
           <td>9</td>
           <td>10</td>
         </tr>
-        <tr>
+        <tr class="library-content-row">
           <td>Owner</td>
           <td>Mother-in-law</td>
           <td>Me</td>
@@ -35,7 +36,7 @@
         </tr>
       </table>
 
-    <button id="display-library-button">Refresh the library!</button>
+    <button id="myButton">Refresh the library!</button>
       
 </body>
 </html>
