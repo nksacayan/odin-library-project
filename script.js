@@ -23,23 +23,23 @@ function displayBook(book) {
     tableRow.className = "library-content-row";
 
     let titleData = document.createElement('td');
-    titleData.content = book.title;
+    titleData.textContent = book.title;
     tableRow.append(titleData);
 
     let authorData = document.createElement('td');
-    authorData.content = book.author;
+    authorData.textContent = book.author;
     tableRow.append(authorData);
 
     let numPagesData = document.createElement('td');
-    numPagesData.content = book.numPages;
+    numPagesData.textContent = book.numPages;
     tableRow.append(numPagesData);
 
     let haveReadData = document.createElement('td');
-    haveReadData.content = book.haveRead;
+    haveReadData.textContent = book.haveRead;
     tableRow.append(haveReadData);
 
-    const libraryTable = document.querySelector("#library-table");
-    libraryTable.append(tableRow);
+    const libraryTable = document.querySelector("tbody");
+    libraryTable.appendChild(tableRow);
 }
 
 function displayLibrary() {
@@ -59,6 +59,17 @@ function onRefreshBooksClicked() {
     clearLibraryContent();
     displayLibrary();
 }
+
+const newBookButton = document.querySelector("#newBookButton");
+newBookButton.addEventListener("click", () => {
+    let titleInput = document.querySelector("#title");
+    let authorInput = document.querySelector("#author");
+    let numPagesInput = document.querySelector("#numPages");
+    let haveReadInput = document.querySelector("#haveRead");
+
+    myLibrary.push(new Book(titleInput.value, authorInput.value, numPagesInput.value, haveReadInput.value));
+    onRefreshBooksClicked();
+});
 
 const button = document.querySelector("#myButton");
 button.addEventListener("click", () => {

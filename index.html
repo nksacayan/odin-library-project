@@ -10,12 +10,15 @@
 <body>
     <h1>Nick's Library</h1>
     <table id="library-table">
+      <thead>
         <tr class="table-header-row">
           <th>Title</th>
           <th>Author</th>
           <th>Number Pages</th>
           <th>Have Read</th>
         </tr>
+      </thead>
+      <tbody>
         <tr class="library-content-row">
           <td>Test Title</td>
           <td>Jack Russell</td>
@@ -34,9 +37,22 @@
           <td>Me</td>
           <td>Me</td>
         </tr>
-      </table>
+      </tbody>
+    </table>
 
     <button id="myButton">Refresh the library!</button>
-      
+    
+    <form>
+      <label for="title">Title: </label>
+      <input type="text" id="title" name="title">
+      <label for="author">author: </label>
+      <input type="text" id="author" name="author">
+      <label for="numPages">numPages: </label>
+      <input type="text" id="numPages" name="numPages">
+      <label for="haveRead">haveRead: </label>
+      <input type="text" id="haveRead" name="haveRead">
+      <button type="button" id="newBookButton">New book</button>
+    </form>
+    
 </body>
 </html>
